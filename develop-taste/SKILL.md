@@ -13,9 +13,22 @@ Read that guidance and the user's references. Identify one unresolved design dec
 
 ## Principles
 
-Design principles form a reusable rubric for making design decisions. Each principle should state:
+Design principles form a reusable rubric for making design decisions.
 
-- The decision it guides.
+Document design intent through relationships, emphasis, and general approach. Describe how elements should relate and what effect they should create, such as headings that dominate supporting text, generous space between content groups, or restrained use of accent color.
+
+Concrete values belong to implementation. Visual examples will use specific sizes, weights, spacing, and colors to demonstrate a direction. Treat those values as choices made for that example. When the user approves it, capture the qualities they preferred and why.
+
+For example:
+
+- "Use large, bold headings that clearly dominate supporting text" captures a principle.
+- "Use 64px headings at weight 700" specifies an implementation.
+
+Write principles that can guide different components and screen sizes while preserving the intended character.
+
+Each principle should state:
+
+- The design relationship or approach it guides, and the intended effect.
 - Where it applies.
 - The user feedback or approved visual example supporting it.
 
