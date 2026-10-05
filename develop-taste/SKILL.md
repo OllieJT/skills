@@ -11,13 +11,19 @@ Use the project's existing design guidance as the authoritative record. If none 
 
 Read that guidance and the user's references. Identify one unresolved design decision. Present contrasting examples, gather feedback, and propose a principle grounded in that feedback. Save the confirmed principle. Finish when the selected decision is documented, or record what remains unresolved if the user defers it.
 
+Visual decisions require visual examples. Before asking the user to choose or confirm a visual treatment, present rendered examples that show the actual alternatives. Reuse examples the user has already seen when they demonstrate the exact choice; create a new comparison when the question introduces a new treatment or relationship. A proposed test page, numerical values, or verbal descriptions alone do not satisfy this requirement.
+
+Prepare and show the comparison as the next step in exploration, then ask about the visible qualities and their effect. For headline weight and leading, show representative multi-line headlines with contrasting treatments and ask which achieves the intended character. Choose the sample values yourself to make the differences visible. If visual examples cannot be presented, explain the limitation and keep the visual decision unresolved.
+
 ## Principles
 
 Design principles form a reusable rubric for making design decisions.
 
 Document design intent through relationships, emphasis, and general approach. Describe how elements should relate and what effect they should create, such as headings that dominate supporting text, generous space between content groups, or restrained use of accent color.
 
-Concrete values belong to implementation. Visual examples will use specific sizes, weights, spacing, and colors to demonstrate a direction. Treat those values as choices made for that example. When the user approves it, capture the qualities they preferred and why.
+Prefer qualitative guidance that captures the qualities the user preferred and why. Treat the specific sizes, weights, spacing, and colors used in visual examples as implementation choices by default.
+
+Include a relative measurement when it preserves an important relationship that words alone would leave ambiguous, such as line height relative to type size. Establish it through visual comparison and user confirmation, state its intended effect and scope, and retain only the precision needed to guide future decisions. A measurement earns its place through the design relationship it captures, rather than simply using a relative unit.
 
 For example:
 
@@ -43,7 +49,7 @@ A documented principle might read:
 
 > **Dashboard density:** Keep related metrics close enough to scan together, with stronger separation between groups. Prioritise simultaneous visibility while preserving clear grouping and readable labels.
 
-Before saving a principle, show its proposed wording and scope. Treat explicit approval of that wording as confirmation. When feedback supports several interpretations, ask which interpretation the user intends.
+Before saving a principle, show its proposed wording and scope, capturing only qualities demonstrated visually and confirmed by the user. Wording approval confirms that the principle expresses the agreed direction. When feedback supports visually different interpretations, show those interpretations in a comparison before asking the user to choose. Keep deferred choices unresolved until they have been explored and confirmed.
 
 When feedback conflicts with a principle, discuss whether its wording, scope, or intended effect needs to change. Propose revising, merging, or removing the principle before adding an exception. Confirm substantive revisions with the user.
 
