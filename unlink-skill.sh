@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'EOF'
+Usage: ./unlink-skill.sh <folder-name>
+
+Remove a skill's links from ~/.agents/skills and ~/.claude/skills.
+Use the old folder name after renaming or deleting a skill.
+
+Optional destination overrides: AGENTS_SKILLS_DIR and CLAUDE_SKILLS_DIR.
+EOF
+}
+
+fail() {
+  printf 'Error: %s\n' "$*" >&2
+  exit 1
+}
+
+case "${1:-}" in
+  -h|--help) usage; exit 0 ;;
+esac
+
+if [[ $# -ne 1 ]]; then
+  usage >&2
+  exit 1
+fi
+
+skill_name=$1
+case "$skill_name" in
+  ''|.|..|*/*|-*) fail 'Provide a single folder name, without a path.' ;;
+esac
+
+skills_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)
+skill_source="$skills_root/$skill_name"
+destinations=(
+  "${AGENTS_SKILLS_DIR:-$HOME/.agents/skills}"
+  "${CLAUDE_SKILLS_DIR:-$HOME/.claude/skills}"
+)
+
+# Check both destinations before changing either one.
+for destination in "${destinations[@]}"; do
+  skill_link="$destination/$skill_name"
+  if [[ -L "$skill_link" ]]; then
+    [[ "$(readlink "$skill_link")" == "$skill_source" ]] ||
+      fail "Refusing to change an unrelated symlink: $skill_link"
+  elif [[ -e "$skill_link" ]]; then
+    fail "Refusing to change an existing file or directory: $skill_link"
+  fi
+done
+
+for destination in "${destinations[@]}"; do
+  skill_link="$destination/$skill_name"
+  if [[ -L "$skill_link" ]]; then
+    rm -- "$skill_link"
+    printf 'Removed: %s\n' "$skill_link"
+  else
+    printf 'Already absent: %s\n' "$skill_link"
+  fi
+done
