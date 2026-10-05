@@ -29,20 +29,19 @@ Write principles that can guide different components and screen sizes while pres
 Each principle should state:
 
 - The design relationship or approach it guides, and the intended effect.
-- Where it applies.
-- The user feedback or approved visual example supporting it.
+- Where it applies, including boundaries that materially affect its use.
 
-Keep references to supporting examples beside the principle.
+Use exploration and discussion to distil the user's preferences into guidance that stands on its own. Include the distinctions that change how a future design decision should be made. Keep the record focused on the resulting guidance; references and discussion history are optional and belong only when they add something the principle needs.
 
-A preference in one comparison is evidence for that context. Confirm its scope with the user before applying it more broadly. For example, preferring a compact dashboard does not establish a preference for dense layouts throughout the project.
+A preference in one comparison applies to that context. Discuss what made it successful and confirm its scope with the user before applying it more broadly. For example, preferring a compact dashboard does not establish a preference for dense layouts throughout the project.
 
 A documented principle might read:
 
-> **Dashboard density:** Prefer compact spacing in monitoring views so more metrics remain visible together. Based on the user's preference for the compact dashboard example, linked here, because it kept more metrics visible. Marketing layouts remain unresolved.
+> **Dashboard density:** Keep related metrics close enough to scan together, with stronger separation between groups. Prioritise simultaneous visibility while preserving clear grouping and readable labels.
 
 Before saving a principle, show its proposed wording and scope. Treat explicit approval of that wording as confirmation. When feedback supports several interpretations, ask which interpretation the user intends.
 
-When feedback conflicts with a principle, review its scope and supporting evidence. Propose revising, merging, or removing the principle before adding an exception. Confirm substantive revisions with the user.
+When feedback conflicts with a principle, discuss whether its wording, scope, or intended effect needs to change. Propose revising, merging, or removing the principle before adding an exception. Confirm substantive revisions with the user.
 
 ## Disciplines
 
