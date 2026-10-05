@@ -33,6 +33,10 @@ Each principle should state:
 
 Use exploration and discussion to distil the user's preferences into guidance that stands on its own. Include the distinctions that change how a future design decision should be made. Keep the record focused on the resulting guidance; references and discussion history are optional and belong only when they add something the principle needs.
 
+Express principles through the desired qualities and how to achieve them. When feedback uses a contrast such as "spacious, not empty", explore what the distinction means to the user and translate it into positive guidance. Preserve the nuance by describing the relationships that produce the intended effect.
+
+For example, that discussion might establish: "Use space to establish clear groups and give important content prominence, keeping related elements close enough to read together." Ground the interpretation in the user's feedback and visual comparisons. When the intended quality remains unclear, continue exploring it with the user before documenting a principle.
+
 A preference in one comparison applies to that context. Discuss what made it successful and confirm its scope with the user before applying it more broadly. For example, preferring a compact dashboard does not establish a preference for dense layouts throughout the project.
 
 A documented principle might read:
