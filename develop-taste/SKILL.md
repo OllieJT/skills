@@ -7,13 +7,18 @@ Taste must be derived from the user and demonstrated through visual examples bef
 
 # Aligning on taste
 
-Use the project's existing design guidance as the authoritative record. If none exists, create `README.DESIGN.md` at the repository root.
+Use the project's existing `README.DESIGN.md` as the authoritative record. If none exists, create `README.DESIGN.md` at the repository root.
 
-Read that guidance and the user's references. Identify one unresolved design decision. Present contrasting examples, gather feedback, and propose a principle grounded in that feedback. Save the confirmed principle. Finish when the selected decision is documented, or record what remains unresolved if the user defers it.
+1. Read that guidance and the user's references.
+2. Identify one unresolved design decision.
+3. Present contrasting examples, gather feedback, and propose a principle grounded in that feedback.
+4. Save the confirmed principle.
 
-Visual decisions require visual examples. Before asking the user to choose or confirm a visual treatment, present rendered examples that show the actual alternatives. Reuse examples the user has already seen when they demonstrate the exact choice; create a new comparison when the question introduces a new treatment or relationship. A proposed test page, numerical values, or verbal descriptions alone do not satisfy this requirement.
+Finish when the selected decision is documented, or record what remains unresolved if the user defers it.
 
-Prepare and show the comparison as the next step in exploration, then ask about the visible qualities and their effect. For headline weight and leading, show representative multi-line headlines with contrasting treatments and ask which achieves the intended character. Choose the sample values yourself to make the differences visible. If visual examples cannot be presented, explain the limitation and keep the visual decision unresolved.
+**Visual decisions require visual examples.** Before asking the user to choose or confirm a decision, present rendered examples that show the actual alternatives. Reuse examples the user has already seen when they demonstrate the exact choice; create a new comparison when the question introduces a new treatment or relationship. A proposed test page, numerical values, or verbal descriptions alone do not satisfy this requirement.
+
+Prepare and show the comparison as the next step in exploration, then ask about the visible qualities and their effect.  Choose the sample values yourself to make the differences visible. If visual examples cannot be presented, explain the limitation and keep the visual decision unresolved.
 
 ## Principles
 
@@ -37,7 +42,7 @@ Each principle should state:
 - The design relationship or approach it guides, and the intended effect.
 - Where it applies, including boundaries that materially affect its use.
 
-Use exploration and discussion to distil the user's preferences into guidance that stands on its own. Include the distinctions that change how a future design decision should be made. Keep the record focused on the resulting guidance; references and discussion history are optional and belong only when they add something the principle needs.
+Use exploration and discussion to distil the user's preferences into self-contained guidance. Document the reasoning and distinctions needed to apply each principle within the design doc itself. Keep demos and exploration artifacts out of the doc's references. References to project source files, such as the global stylesheet, may identify where the guidance is implemented; the doc must still explain the design intent and scope without requiring those files to be opened.
 
 Express principles through the desired qualities and how to achieve them. When feedback uses a contrast such as "spacious, not empty", explore what the distinction means to the user and translate it into positive guidance. Preserve the nuance by describing the relationships that produce the intended effect.
 
@@ -78,3 +83,5 @@ The disciplines below are examples. They overlap and can be combined. Choose or 
 - **Content and restraint:** What earns space, what is omitted, and what appears progressively.
 - **Consistency and variation:** Repetition and deliberate exceptions.
 - **Responsive composition:** How hierarchy, density, layout, and imagery adapt to available space.
+
+The design doc alone should enable a new developer to design pages that feel on-brand.
