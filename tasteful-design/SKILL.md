@@ -3,7 +3,7 @@ name: tasteful-design
 description: Implement and explore interfaces within an established design style. Use when building or refining designs from approved design guidance, including visual comparisons, layout, typography, motion, interface copy, and rendered review.
 ---
 
-Read the project's authoritative design guidance in full, including the scope and supporting examples of relevant principles. If no agreed direction exists, use `develop-taste` to establish it.
+Read the project's authoritative design guidance in full, including the intent and scope of relevant principles. Consult referenced source files when implementing that guidance. If no agreed direction exists, use `develop-taste` to establish it.
 
 Use the approved style as the foundation for creative exploration. When an unresolved decision would require adding, changing, or extending a design principle, follow `develop-taste` to resolve it with the user.
 
