@@ -39,7 +39,7 @@ The design doc carries the reasoning and distinctions needed to apply each princ
 
 ## Confirming
 
-Before saving, show the proposed wording and scope, covering only qualities the user saw and confirmed. When feedback supports visually different interpretations, compare them before asking the user to choose.
+Before saving, show the proposed wording and scope, covering only qualities the user chose between in a narrow round. When feedback supports visually different interpretations, compare them before asking the user to choose.
 
 ## Revising
 

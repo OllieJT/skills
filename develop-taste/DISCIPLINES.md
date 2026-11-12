@@ -24,6 +24,6 @@ The list is a starting taxonomy. Disciplines overlap and combine; introduce new 
 
 Each comparison is an A/B/C test answering one stated question.
 
-- Vary one discipline, or a few whose relationship is the question (typography, spacing, and hierarchy together).
+- Vary one **variable**: a single value set, or one relationship, which may span disciplines (heading size against body size). A survey round may vary more, but its pick only locates a region.
 - Hold content and every unrelated choice constant, so the user can see what drives their preference.
 - Use single-file HTML with CSS and JavaScript when it makes the variants easier to judge.
