@@ -1,14 +1,8 @@
 # Disciplines
 
-Design disciplines help us explore how visual elements and their use contribute to a design style. Focus each comparison on a few elements that help answer the current design question. Explore related elements together when their relationship matters, such as typography, spacing, and hierarchy.
+Disciplines are the dimensions of a design style, each covering values and qualities you can vary. Organise `README.DESIGN.md` by discipline, and use them to pick what a comparison explores.
 
-Design disciplines help us explore how visual elements and their use contribute to a design style. Focus each comparison on a few elements that help answer the current design question. Explore related elements together when their relationship matters, such as typography, spacing, and hierarchy.
-
-Keep content and unrelated design choices consistent so the user can identify what drives their preference. State the question the variants explore, and discuss the user's feedback before generalising it into a principle.
-
-Aligning on principles should feel like an A/B/C test for the user. Use single-file HTML examples with CSS and JavaScript when they make the comparison easier to judge.
-
-The disciplines below are examples. They overlap and can be combined. Choose or introduce disciplines appropriate to the design style and decision you are exploring.
+The list is a starting taxonomy. Disciplines overlap and combine; introduce new ones when the style calls for it.
 
 - **Typography:** Font, size, weight, line height, and letter spacing.
 - **Color palette:** Colors, shades, and combinations.
@@ -26,4 +20,10 @@ The disciplines below are examples. They overlap and can be combined. Choose or 
 - **Consistency and variation:** Repetition and deliberate exceptions.
 - **Responsive composition:** How hierarchy, density, layout, and imagery adapt to available space.
 
-The design doc alone should enable a new developer to design pages that feel on-brand.
+## Comparing
+
+Each comparison is an A/B/C test answering one stated question.
+
+- Vary one discipline, or a few whose relationship is the question (typography, spacing, and hierarchy together).
+- Hold content and every unrelated choice constant, so the user can see what drives their preference.
+- Use single-file HTML with CSS and JavaScript when it makes the variants easier to judge.

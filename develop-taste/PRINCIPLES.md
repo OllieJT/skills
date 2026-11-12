@@ -1,35 +1,49 @@
 # Principles
 
-Document design intent through relationships, emphasis, and general approach. Describe how elements should relate and what effect they should create, such as headings that dominate supporting text, generous space between content groups, or restrained use of accent color.
+A principle describes how elements relate and the effect they create: headings that dominate supporting text, generous space between groups, restrained accent color. It guides different components and screen sizes while preserving the intended character.
 
-Prefer qualitative guidance that captures the qualities the user preferred and why. Treat the specific sizes, weights, spacing, and colors used in visual examples as implementation choices by default.
+## Anatomy
 
-Include a relative measurement when it preserves an important relationship that words alone would leave ambiguous, such as line height relative to type size. Establish it through visual comparison and user confirmation, state its intended effect and scope, and retain only the precision needed to guide future decisions. A measurement earns its place through the design relationship it captures, rather than simply using a relative unit.
+Each principle states:
 
-For example:
-
-- "Use large, bold headings that clearly dominate supporting text" captures a principle.
-- "Use 64px headings at weight 700" specifies an implementation.
-
-Write principles that can guide different components and screen sizes while preserving the intended character.
-
-Each principle should state:
-
-- The design relationship or approach it guides, and the intended effect.
-- Where it applies, including boundaries that materially affect its use.
-
-Use exploration and discussion to distil the user's preferences into self-contained guidance. Document the reasoning and distinctions needed to apply each principle within the design doc itself. Keep demos and exploration artifacts out of the doc's references. References to project source files, such as the global stylesheet, may identify where the guidance is implemented; the doc must still explain the design intent and scope without requiring those files to be opened.
-
-Express principles through the desired qualities and how to achieve them. When feedback uses a contrast such as "spacious, not empty", explore what the distinction means to the user and translate it into positive guidance. Preserve the nuance by describing the relationships that produce the intended effect.
-
-For example, that discussion might establish: "Use space to establish clear groups and give important content prominence, keeping related elements close enough to read together." Ground the interpretation in the user's feedback and visual comparisons. When the intended quality remains unclear, continue exploring it with the user before documenting a principle.
-
-A preference in one comparison applies to that context. Discuss what made it successful and confirm its scope with the user before applying it more broadly. For example, preferring a compact dashboard does not establish a preference for dense layouts throughout the project.
-
-A documented principle might read:
+- **Relationship and effect:** the design relationship or approach it guides, and what that achieves.
+- **Scope:** where it applies, including boundaries that materially affect its use.
 
 > **Dashboard density:** Keep related metrics close enough to scan together, with stronger separation between groups. Prioritise simultaneous visibility while preserving clear grouping and readable labels.
 
-Before saving a principle, show its proposed wording and scope, capturing only qualities demonstrated visually and confirmed by the user. Wording approval confirms that the principle expresses the agreed direction. When feedback supports visually different interpretations, show those interpretations in a comparison before asking the user to choose. Keep deferred choices unresolved until they have been explored and confirmed.
+## Intent here, values in code
 
-When feedback conflicts with a principle, discuss whether its wording, scope, or intended effect needs to change. Propose revising, merging, or removing the principle before adding an exception. Confirm substantive revisions with the user.
+Exact values belong in the code. The doc captures the intent behind them, so values can change without the doc going stale.
+
+- **Principle:** "Use large, bold headings that clearly dominate supporting text."
+- **Value, kept in code:** "Use 64px headings at weight 700."
+
+Record a value in the doc only when the principle depends on it being exact, such as a brand color, and say why it must hold.
+
+## Positive guidance
+
+When feedback is phrased as a contrast, explore what the distinction means to the user and write the relationships that produce the desired quality.
+
+- **Feedback:** "Spacious, not empty."
+- **Principle:** "Use space to establish clear groups and give important content prominence, keeping related elements close enough to read together."
+
+If the intended quality is still unclear, keep exploring before documenting.
+
+## Scope
+
+A preference holds for the context it was tested in. Discuss what made it work and confirm its scope before applying it more broadly.
+
+- **Tested:** the user prefers a compact dashboard.
+- **Not established:** dense layouts throughout the project.
+
+## Self-contained
+
+The design doc carries the reasoning and distinctions needed to apply each principle. Leave demos and exploration artifacts out of it. A principle may point to the source file that implements it, such as the global stylesheet, but must read fully without opening that file.
+
+## Confirming
+
+Before saving, show the proposed wording and scope, covering only qualities the user saw and confirmed. When feedback supports visually different interpretations, compare them before asking the user to choose.
+
+## Revising
+
+When feedback conflicts with a principle, decide with the user whether its wording, scope, or intended effect should change. Prefer revising, merging, or removing the principle over adding an exception.
