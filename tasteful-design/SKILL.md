@@ -53,7 +53,12 @@ Use the cheapest medium that makes the decision visible. Wireframes can compare 
 
 ### Compare with the user
 
-Set up each comparison following develop-taste's [comparing rules](../develop-taste/DISCIPLINES.md#comparing). Show the alternatives at comparable fidelity, explain what differs, and ask what drives the user's preference. Offer a recommendation with reasons, while leaving the aesthetic judgement to the user.
+Make each comparison an A/B/C test answering one stated question:
+
+- Vary a few elements whose relationship is the question, such as typography, spacing, and hierarchy together.
+- Hold content and every unrelated choice constant, so the user can see what drives their preference.
+
+Show the alternatives at comparable fidelity, explain what differs, and ask what drives the user's preference. Offer a recommendation with reasons, while leaving the aesthetic judgement to the user.
 
 The user may choose an option, combine aspects, reject all of them, or request another direction. Use that feedback to refine the next comparison. A selection holds for the current context; then build it as above.
 
