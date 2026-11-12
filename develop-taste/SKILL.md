@@ -28,6 +28,8 @@ Before asking the user to choose or confirm a decision, present rendered example
 
 Prepare and show the comparison as the next step in exploration, then ask about the visible qualities and their effect.  Choose the sample values yourself to make the differences visible. If visual examples cannot be presented, explain the limitation and keep the visual decision unresolved.
 
+Build every comparison on the principles already confirmed in the design doc, so each new learning extends what's decided rather than contradicting it. When a question needs to stretch a confirmed principle, such as pushing type further to test a bolder tone, keep the stretch recognisable as that principle and point it out to the user.
+
 ## What is a design principle?
 
 Design [PRINCIPLES.md](PRINCIPLES.md) form a reusable rubric for making design decisions. Once the visual examples are thrown away, a good designer should be able to use the principles you document to create new work that match the user's taste.
@@ -36,4 +38,13 @@ Design [PRINCIPLES.md](PRINCIPLES.md) form a reusable rubric for making design d
 
 Design [DISCIPLINES.md](DISCIPLINES.md) are the taxonomy of our design documentation. They describe all of the measurable values, and immeasurable qualities that we can tweak to achieve the taste we're working towards.
 
-Good design documentation should start with a solid foundation of typography, color, spacing, and establish a tone that captures the intended vibe of the designs.
+## Laying the foundation
+
+When the user gives no direction and the design doc can't answer what to explore next, start with foundational disciplines such as tone, typography, color, and spacing; later decisions build on them. These are examples: [DISCIPLINES.md](DISCIPLINES.md) lists more, and even that list is open-ended.
+
+Each discipline spans several sessions, one question per session, explored on a representative screen from the project. Skip any question the design doc already answers. Example questions:
+
+- **Typography:** What character should the typeface carry? How strongly should headings dominate body text? How dense should body copy read?
+- **Color:** How much of the interface carries color? What role does the accent play? How does dark mode differ from light?
+- **Spacing:** How tightly do related elements group? How much separates sections? Where should density change between views?
+- **Tone:** Reach it by association, since it resists description. Which brands, sites, or media feel like this product? How contemporary should it feel? Utilitarian, or distinctive and artistic?
