@@ -13,12 +13,9 @@ Each principle states:
 
 ## Intent here, values in code
 
-Exact values belong in the code. The doc captures the intent behind them, so values can change without the doc going stale.
+The code defines exact values; the doc captures the intent behind them. A value can illustrate a principle, but leave the full set to the code so the doc stays current as values change.
 
-- **Principle:** "Use large, bold headings that clearly dominate supporting text."
-- **Value, kept in code:** "Use 64px headings at weight 700."
-
-Record a value in the doc only when the principle depends on it being exact, such as a brand color, and say why it must hold.
+> "Use large, bold headings that clearly dominate supporting text, such as 64px bold over 16px body."
 
 ## Positive guidance
 
