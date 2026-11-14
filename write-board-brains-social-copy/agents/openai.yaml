@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Board Brains Social Copy"
+  short_description: "Write aligned social copy for Board Brains"
+  default_prompt: "Use $write-board-brains-social-copy with this video transcript to align on its purpose and framing, then write the hook, caption, and title variations."
