@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 Run the `/grilling` process (relentless, a round of questions at a time, a recommended answer attached to each) through the loop lens below. Its only output is the docs in the workspace: create, edit, and delete them as the grilling resolves things.
 
-The docs are the session's state. Read the overview first, then the vision docs this session touches, and resume from what they leave open. When the overview is thin, grill me on the product until every part is written before opening any loop.
+The docs are the session's state. Read the overview first, then the vision docs this session touches, and resume from what they leave open. When the overview is thin, grill me on the product until its fixed parts are written before opening any loop.
 
 **User** always means the person using the product; I am the one being grilled.
 
@@ -21,7 +21,7 @@ Users who share a goal arrive from different starts, with different expectations
 
 Loops nest: a stage of one loop can be a loop of its own. It stays a stage in the parent's doc until I decide it earns a vision doc of its own: when you think one does, ask me.
 
-Loops also reveal how predictable a user's activity really is, which is what makes it worth specifying. Use the lens to find loops worth specifying, and propose ones I haven't noticed.
+Loops also reveal how predictable a user's activity really is, which is what makes it worth specifying. Use the lens to find loops worth specifying, and propose ones I haven't noticed. When a loop surfaces that falls outside this session, ask me whether to plan it; on my yes, add it to **Planned** in the overview.
 
 ## Vision docs
 
@@ -45,10 +45,12 @@ The session is done when every loop it opened is done or parked by me, and the o
 ## The workspace
 
 - `docs/product-vision/*.md`: the vision docs, one per loop, and the source of truth. Name each file for its loop, so the directory listing is the index.
-- `Product Vision.md`, at the repo root: the **overview**, read to grasp the whole product before opening any vision doc. It is derived from the vision docs: when they disagree, rewrite the overview. Its size is fixed:
+- `Product Vision.md`, at the repo root: the **overview**, read to grasp the whole product before opening any vision doc. It is derived from the vision docs: when they disagree, rewrite the overview. Its parts are fixed in size:
   - **North star**: 2 sentences, the dream the product is working towards, phrased as an elevator pitch.
   - **Why** the product exists: 3 sentences.
   - **Who** it's for: 3 sentences.
   - **What** it does: 6 sentences, the loops combined into one picture rather than listed.
   - **Boundaries**: 3 sentences, what the product deliberately leaves to others.
   A new vision doc is absorbed by rewriting within that budget.
+
+  The one part that grows is **Planned**: the loops I have approved that have no vision doc yet, one line each (a name and a sentence). An entry is added only on my yes, and leaves when its vision doc is created.
