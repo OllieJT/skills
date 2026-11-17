@@ -1,5 +1,5 @@
 interface:
-  display_name: "Wayfinder"
-  short_description: "Map a large effort as decision tickets"
+  display_name: "Vision Plan"
+  short_description: "Grill me into product-vision docs, one per user loop"
 policy:
   allow_implicit_invocation: false
