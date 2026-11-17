@@ -4,7 +4,7 @@ This catalog owns cross-project prefix assignments, standing reservations, and e
 
 ## Projects
 
-Paths are relative to the user's Developer directory; locate the checkout in the current environment.
+Match the project by its `origin` remote, since worktrees live outside these paths. Paths are relative to the user's Developer directory.
 
 | Prefix | Repository |
 | --- | --- |
@@ -20,6 +20,8 @@ Keep each prefix unique across projects. Add new owners here when allocating a p
 
 | Port | Reason |
 | --- | --- |
+| 5000, 7000 | macOS AirPlay Receiver; skip Vite slot 0 for prefixes 50 and 70 |
+| 5037 | Android Debug Bridge; skip custom HTTP slot 7 for prefix 50 |
 | 5201 | iperf3 default; Wisdecks' Vite slot 1 is skipped |
 | 5432 | PostgreSQL default; skip Spoons' custom HTTP slot 2 |
 | 5554–5555 | Android emulator; skip these in Career's block |

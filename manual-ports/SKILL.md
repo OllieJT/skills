@@ -7,12 +7,12 @@ description: Assign local service ports when adding services, changing defaults,
 
 Choose the branch before changing anything:
 
-- **Temporary instance or collision:** use a launch-time override. Follow [Overrides](#overrides).
-- **New service or permanent reassignment:** follow [Assignments](#assignments). For a dry run, report the proposed changes and stop before applying them.
+- **Temporary instance, or a default port busy at launch:** use a launch-time override. Follow [Overrides](#overrides).
+- **New service, permanent reassignment, or two defaults that clash:** follow [Assignments](#assignments). For a dry run, report the proposed changes and stop before applying them.
 
 ## Overrides
 
-Keep the project's prefix and permanent defaults. Choose a free, suitable port; suffixes 70–99 in the project's block are the suggested pool, rather than a restriction on valid overrides. Inspect the service's existing CLI flags or environment variables and override auxiliary listeners separately when needed.
+Keep the project's [prefix](references/catalog.md) and permanent defaults. Choose a free, suitable port; suffixes 70–99 in the project's block are the suggested pool, rather than a restriction on valid overrides. Inspect the service's existing CLI flags or environment variables and override auxiliary listeners separately when needed.
 
 Check the selected ports against reservations and current listeners. An alternate browser origin may also need auth or CORS configuration; read the relevant [tooling notes](references/tooling.md#sanity) for Sanity.
 
@@ -29,9 +29,9 @@ Four digits, `PPTS`: the first two identify the project, the third identifies th
 | 20–29 | Expo / Metro |
 | 30–39 | Custom HTTP server |
 | 40–49 | TanStack devtools event bus |
-| 50–59 | Unallocated |
+| 50–59 | Unallocated; future service types |
 | 60–69 | Vite build preview |
-| 70–99 | Additional instances / future allocations |
+| 70–99 | Additional instances (override pool) |
 
 Slots start at zero and stay stable. Skip reserved numbers. For an app that runs them, preview and devtools ports reuse its Vite slot: dev + 60 and dev + 40 respectively. Check those derived ports together before allocating the slot. Processes without a listener need no port.
 
@@ -39,7 +39,7 @@ Slots start at zero and stay stable. Skip reserved numbers. For an app that runs
 
 ### 1. Inventory and allocate
 
-Read [prefix ownership and reservations](references/catalog.md) and the project's startup configuration. Account for app servers, auxiliary listeners, previews, root task runners, aliases, and native launch commands. Use files and installed binaries for discovery; avoid dependency installation merely to inspect settings.
+Read [prefix ownership and reservations](references/catalog.md) and the project's startup configuration. Account for app servers, auxiliary listeners, previews, root task runners, aliases, native launch commands, and agent or IDE launch configs. Use files and installed binaries for discovery; avoid dependency installation merely to inspect settings.
 
 Preserve an existing prefix. For a new project, select an unowned two-digit prefix and record its owner. Surface conflicting ownership before assigning from that block. For an unsupported service type or a full band, propose an explicit exception or convention rather than silently inventing one.
 
@@ -61,6 +61,6 @@ Done when all startup paths resolve consistently and each affected integration i
 
 Inspect all changed startup paths; exercise each distinct changed launch mechanism, each changed override implementation, and simultaneous startup where services interact. Check busy-port failure when changing launcher collision handling. Record checks that cannot run and why. Stop only processes you started, unless the user requested keeping them running.
 
-Runtime configuration owns applied service ports. Update the shared catalog only for prefix ownership, reservations, and exceptions. Keep pending rollout plans separate and distinguish proposed changes from applied ones in the report.
+Runtime configuration owns applied service ports. Update the shared catalog only for prefix ownership, reservations, and exceptions. It lives in the skills repository, outside the project: report a catalog edit as an uncommitted change there. Keep pending rollout plans separate and distinguish proposed changes from applied ones in the report.
 
 Done when the report accounts for every affected service's default, override, integration changes, and verification outcome.
