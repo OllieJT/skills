@@ -6,6 +6,8 @@ disable-model-invocation: true
 
 Run the `/grilling` process (relentless, a round of questions at a time, a recommended answer attached to each) through the loop lens below. Its only output is the docs in the workspace: create, edit, and delete them as the grilling resolves things. When a question asks me to approve drafted text, quote the text in the question.
 
+Ground every question in something I said or the docs hold, and label anything new as a proposal. When two of my answers conflict, quote both and ask which wins.
+
 The docs are the session's state. Read the overview and the glossary first, then the vision doc this session opens, and resume from what they leave open.
 
 A session has one subject: the overview, or one loop. Ask only what would change the subject's doc; park anything else as a note on the planned loop it belongs to.
@@ -31,6 +33,8 @@ Loops also reveal how predictable a user's activity really is, which is what mak
 
 A **vision doc** documents one loop as product design: what the user experiences and what the product promises. The technical solution belongs to the specification written from it.
 
+Write questions, recommendations and doc lines as *intent*: what the user experiences and what the product promises. Placement, visuals, timings and mechanisms are the specification's to choose. When I leave a decision open on purpose, record it in the doc as `Deferred: <decision>`.
+
 Every vision doc uses these terms as its headings, in this order:
 
 - **Start**: who the user is and the state they begin in, one entry per distinct start.
@@ -41,14 +45,14 @@ Every vision doc uses these terms as its headings, in this order:
 
 ## Definition of done
 
-A vision doc is done when a fresh agent could write its technical specification without asking a single product question. Test it: dispatch a subagent with only that doc, the overview, and the glossary to list the product questions it would need answered. Grill each one into the doc; done is an empty list.
+A vision doc is done when a fresh agent could write its technical specification without asking a single product question. Test it: dispatch a fresh subagent with [`done-test.md`](done-test.md) as its prompt, filling in the three paths. Grill each question it returns into the doc, and fix each contradiction it returns; done is an empty list.
 
 The session is done when its subject is done or parked by me, and the overview reflects it.
 
 ## The workspace
 
 - `docs/product-vision/*.md`: the vision docs, one per loop, and the source of truth for their loops. Name each file for its loop, so the directory listing is the index.
-- The glossary: the source of truth for terms, located and formatted by `/domain-modeling`. Sharpen fuzzy terms into canonical ones as they surface, record each there as that skill prescribes, and write every doc in glossary terms.
+- The glossary: the source of truth for terms. Load `/domain-modeling` before your first glossary edit, and record terms as it prescribes, each meaning under its own term. Sharpen fuzzy terms into canonical ones as they surface, and write every doc in glossary terms.
 - `Product Vision.md`, at the repo root: the **overview**, read to grasp the whole product before opening any vision doc. Where it disagrees with a vision doc, the vision doc wins: rewrite the overview. Its parts are fixed in size:
   - **North star**: 2 sentences, the dream the product is working towards, phrased as an elevator pitch.
   - **Why** the product exists: 3 sentences.
