@@ -6,9 +6,9 @@ disable-model-invocation: true
 
 Run the `/grilling` process (relentless, a round of questions at a time, a recommended answer attached to each) through the loop lens below. Its only output is the docs in the workspace: create, edit, and delete them as the grilling resolves things. When a question asks me to approve drafted text, quote the text in the question.
 
-The docs are the session's state. Read the overview and the glossary first, then the vision doc this session opens, and resume from what they leave open.
+The docs are the session's state. Read the overview, the glossary, and the planned loops first, then the vision doc this session opens, and resume from what they leave open.
 
-A session has one subject: the overview, or one loop. Ask only what would change the subject's doc; park anything else as a note on the planned loop it belongs to.
+A session has one subject: the overview, or one loop. Ask only what would change the subject's doc; park anything else on the planned loop it belongs to.
 
 While the overview is thin, it is the subject: grill me on the product until its fixed parts are written and I have approved its planned loops. After that the subject is the loop I name; when I name none, propose the unblocked planned loops.
 
@@ -25,7 +25,7 @@ Users who share a goal arrive from different starts, with different expectations
 
 Loops nest: a stage of one loop can be a loop of its own. It stays a stage in the parent's doc until I decide it earns a vision doc of its own: when you think one does, ask me.
 
-Loops also reveal how predictable a user's activity really is, which is what makes it worth specifying. Use the lens to find loops worth specifying, and propose ones I haven't noticed. When a loop surfaces beyond the session's subject, ask me whether to plan it; on my yes, add it to the overview's planned loops.
+Loops also reveal how predictable a user's activity really is, which is what makes it worth specifying. Use the lens to find loops worth specifying, and propose ones I haven't noticed. When a loop surfaces beyond the session's subject, ask me whether to plan it; on my yes, file it as a planned loop.
 
 ## Vision docs
 
@@ -43,7 +43,7 @@ Every vision doc uses these terms as its headings, in this order:
 
 A vision doc is done when a fresh agent could write its technical specification without asking a single product question. Test it: dispatch a subagent with only that doc, the overview, and the glossary to list the product questions it would need answered. Grill each one into the doc; done is an empty list.
 
-The session is done when its subject is done or parked by me, and the overview reflects it.
+The session is done when its subject is done or parked by me, and the overview and planned loops reflect it.
 
 ## The workspace
 
@@ -58,4 +58,8 @@ The session is done when its subject is done or parked by me, and the overview r
 
   A new vision doc is absorbed by rewriting within that budget.
 
-  The one part that grows is **Planned loops**: the loops I have approved that have no vision doc yet. Each entry is a name and a sentence on what the loop entails, any note parked for its session, and a `Blocked by` sub-bullet for every loop whose vision doc should be done first. An entry is added only on my yes and leaves when its vision doc is created; the `Blocked by` lines naming it leave when that doc is done.
+- The issue tracker defined in `docs/agents/issue-tracker.md` (if the repo defines none, ask me where to track them): the **planned loops**, one issue per loop I have approved whose vision doc is not done.
+  - Title each issue with the loop's name, label it `Vision Loop` (creating the label if missing), and write a sentence on what the loop entails as its body. Parked notes go on as comments.
+  - Block it on every loop whose vision doc should be done first. A planned loop is unblocked when every blocker is closed.
+  - Use the tracker's native labels and blocking. Where it lacks either, record it in the issue's frontmatter: `labels: [Vision Loop]`, `blocked-by: [<issue>, …]`.
+  - When its vision doc is done, comment with the doc's path and close the issue.
