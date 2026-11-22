@@ -10,7 +10,7 @@ The docs are the session's state. Read the overview, the glossary, and the plann
 
 A session has one subject: the overview, or one loop. Ask only what would change the subject's doc; park anything else on the planned loop it belongs to.
 
-While the overview is thin, it is the subject: grill me on the product until its fixed parts are written and I have approved its planned loops. After that the subject is the loop I name; when I name none, propose the unblocked planned loops.
+While the overview is thin, it is the subject: grill me on the product until its fixed parts are written and I have approved its planned loops. After that the subject is the loop I name; when I name none, propose the unblocked planned loops, holding `Later` ones back until no others remain.
 
 **User** means whoever walks the loop, named as the glossary names them; I am the one being grilled.
 
@@ -25,7 +25,7 @@ Users who share a goal arrive from different starts, with different expectations
 
 Loops nest: a stage of one loop can be a loop of its own. It stays a stage in the parent's doc until I decide it earns a vision doc of its own: when you think one does, ask me.
 
-Loops also reveal how predictable a user's activity really is, which is what makes it worth specifying. Use the lens to find loops worth specifying, and propose ones I haven't noticed. When a loop surfaces beyond the session's subject, ask me whether to plan it; on my yes, file it as a planned loop.
+Loops also reveal how predictable a user's activity really is, which is what makes it worth specifying. Use the lens to find loops worth specifying, and propose ones I haven't noticed. When a loop surfaces beyond the session's subject, ask me whether to plan it, with your recommendation on whether it is `Later`; on my yes, file it as a planned loop.
 
 ## Vision docs
 
@@ -59,7 +59,8 @@ The session is done when its subject is done or parked by me, and the overview a
   A new vision doc is absorbed by rewriting within that budget.
 
 - The issue tracker defined in `docs/agents/issue-tracker.md` (if the repo defines none, ask me where to track them): the **planned loops**, one issue per loop I have approved whose vision doc is not done.
-  - Title each issue with the loop's name, label it `Vision Loop` (creating the label if missing), and write a sentence on what the loop entails as its body. Parked notes go on as comments.
+  - Title each issue with the loop's name, label it `Vision Loop`, and write a sentence on what the loop entails as its body. Parked notes go on as comments.
+  - Label it `Later` too when I want it documented but not soon. A `Later` loop that blocks a loop without the label is treated as unlabelled.
   - Block it on every loop whose vision doc should be done first. A planned loop is unblocked when every blocker is closed.
-  - Use the tracker's native labels and blocking. Where it lacks either, record it in the issue's frontmatter: `labels: [Vision Loop]`, `blocked-by: [<issue>, …]`.
+  - Use the tracker's native labels and blocking, creating any label it lacks. Where it lacks either feature, record it in the issue's frontmatter: `labels: [Vision Loop, Later]`, `blocked-by: [<issue>, …]`.
   - When its vision doc is done, comment with the doc's path and close the issue.
